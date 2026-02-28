@@ -5,5 +5,5 @@ Comment="PC port of Perfect Dark"
 Icon=io.github.fgsfdsfgs.perfect_dark
 Exec=pd
 Terminal=false
-StartupWMClass=
+StartupWMClass=pd
 Categories=Game;Action;
