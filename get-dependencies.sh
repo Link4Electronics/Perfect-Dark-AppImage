@@ -9,6 +9,7 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     cmake    \
     libdecor \
+    python   \
     sdl2
 
 echo "Installing debloated packages..."
@@ -30,6 +31,6 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./perfect_dark
-cmake -G"Unix Makefiles" -Bbuild .
+cmake -G"Unix Makefiles" -Bbuild -DCMAKE_BUILD_TYPE=Release .
 cmake --build build -j$(nproc)
 mv -v build/pd.$arch ./AppDir/bin/pd
