@@ -37,5 +37,5 @@ cmake --build build -j$(nproc)
 if [ "$ARCH" = "x86_64" ]; then
     mv -v build/pd.$ARCH ../AppDir/bin/pd
 else
-   mv -v build/pd.arm64 ../AppDir/bin/pd
+    mv -v build/pd.arm64 ../AppDir/bin/pd
 fi
