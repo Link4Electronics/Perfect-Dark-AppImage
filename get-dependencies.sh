@@ -33,4 +33,9 @@ mkdir -p ./AppDir/bin
 cd ./perfect_dark
 cmake -G"Unix Makefiles" -Bbuild -DCMAKE_BUILD_TYPE=Release .
 cmake --build build -j$(nproc)
-mv -v build/pd.$ARCH ../AppDir/bin/pd
+
+if [ "$ARCH" = "x86_64" ]; then
+    mv -v build/pd.$ARCH ../AppDir/bin/pd
+else
+   mv -v build/pd.arm64 ../AppDir/bin/pd
+fi
